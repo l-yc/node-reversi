@@ -6,7 +6,8 @@ const log = {
 
 /* networking */
 let socket = io({
-  autoConnect: true // no need to call socket.open()
+  autoConnect: true, // no need to call socket.open()
+  path: window.location.pathname + "socket.io"
 });
 
 socket.on('connect', event => {
