@@ -1,0 +1,16 @@
+{
+  "name": "reversi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "l-yc",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "test": "DEBUG=deal:* nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}

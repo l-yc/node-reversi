@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, main {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* game */
+#app .game {
+  flex: 1;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+#board {
+  background-color: #fda;
+  border: solid 2px black;
+
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#board .row .cell {
+  height: 4rem;
+  width: 4rem;
+  border: solid 2px black;
+}
+
+.checker {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.checker.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.checker .face {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.checker .face--front {
+  background: white;
+}
+
+.checker .face--back {
+  background: black;
+  transform: rotateY(180deg);
+}
+
+/* sidebar */
+#app .sidebar {
+  max-width: 300px;
+  border: solid 2px black;
+
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* general */
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+}
