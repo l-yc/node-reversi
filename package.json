@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "test": "DEBUG=deal:* nodemon index.js"
+    "test": "DEBUG=reversi:* nodemon index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
